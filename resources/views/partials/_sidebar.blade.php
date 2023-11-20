@@ -7,7 +7,7 @@ aria-label="Sidebar"
   <ul class="space-y-2 font-medium">
     <li class="mt-2 border-b pb-3">
       <a
-        href="/adminDashboard"
+        href="/admin/adminDashboard"
         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
       >
         <svg
@@ -29,7 +29,7 @@ aria-label="Sidebar"
     </li>
     <li>
       <a
-        href="/adminEvents"
+        href="/admin/adminEvents"
         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
       >
         <svg
@@ -49,7 +49,7 @@ aria-label="Sidebar"
 
     <li>
       <a
-        href="/adminRecords"
+        href="/admin/adminRecords"
         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
       >
         <svg
@@ -68,7 +68,7 @@ aria-label="Sidebar"
     </li>
     <li>
       <a
-        href="/adminAddRecords"
+        href="/admin/adminAddRecords"
         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
       >
         <svg
@@ -106,7 +106,7 @@ aria-label="Sidebar"
     </li>
     <li>
       <a
-        href="/adminCreateBlog"
+        href="/admin/adminCreateBlog"
         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
       >
         <svg

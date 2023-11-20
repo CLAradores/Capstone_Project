@@ -8,7 +8,10 @@
         <p class="mt-2 pb-5">Fill out your information carefully</p>
         <hr />
         <div>
-          <form action="#" class="mt-6">
+
+          <form  class="mt-6" method="POST" action="/admin/{{$record->id}}" enctype="multipart/form-data">
+            @csrf 
+            @method('PUT')
             <h3 class="mt-6 font-medium lg-mb-0 mb-10">
               Name <span class="text-red-500"> * </span>
             </h3>
@@ -19,7 +22,12 @@
                 <input
                   placeholder="First Name"
                   class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                  name="first_name"
+                  value="{{$record->first_name}}"
                 />
+                @error('first_name')
+                <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                @enderror
                 <label
                   class="after:content[' '] pointer-events-none absolute left-0 -top-2.5 flex h-full w-full select-none text-sm font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-2.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-pink-500 after:transition-transform after:duration-300 peer-placeholder-shown:leading-tight peer-placeholder-shown:text-blue-gray-500 peer-focus:text-sm peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:after:scale-x-100 peer-focus:after:border-pink-500 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
                 >
@@ -30,23 +38,35 @@
                 <input
                   placeholder="Last Name"
                   class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                  name="last_name"
+                  value="{{$record->last_name}}"
+
                 />
+                
                 <label
                   class="after:content[' '] pointer-events-none absolute left-0 -top-2.5 flex h-full w-full select-none text-sm font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-2.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-pink-500 after:transition-transform after:duration-300 peer-placeholder-shown:leading-tight peer-placeholder-shown:text-blue-gray-500 peer-focus:text-sm peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:after:scale-x-100 peer-focus:after:border-pink-500 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
                 >
                   Last Name
                 </label>
+                @error('last_name')
+                <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                @enderror
               </div>
               <div class="relative h-11 w-full min-w-[200px]">
                 <input
                   placeholder="Middle Name"
                   class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                  name="middle_name"
+                  value="{{$record->middle_name}}"
                 />
                 <label
                   class="after:content[' '] pointer-events-none absolute left-0 -top-2.5 flex h-full w-full select-none text-sm font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-2.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-pink-500 after:transition-transform after:duration-300 peer-placeholder-shown:leading-tight peer-placeholder-shown:text-blue-gray-500 peer-focus:text-sm peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:after:scale-x-100 peer-focus:after:border-pink-500 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
                 >
                   Middle Name
                 </label>
+                @error('middle_name')
+                <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                @enderror
               </div>
             </div>
             <div class="mt-10 pb-10 flex space-x-32 border-b">
@@ -57,19 +77,26 @@
                 </h4>
                 <div>
                   <div class="mt-3">
-                    <input type="radio" name="lmale" id="male" />
+                    <input type="radio" name="gender" value='Male'   id="male" />
                     <label for="male">Male</label>
                   </div>
                   <div class="mt-3">
-                    <input type="radio" name="lmale" id="female" />
+                    <input type="radio" name="gender" value='Female' id="female" />
                     <label for="female">Female</label>
                   </div>
+                  @error('gender')
+                  <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                  @enderror
                 </div>
               </div>
               <div>
                 <label for="age">Age</label> &nbsp;
-                <input id="age" class="rounded-lg w-16" type="text" />
+                <input id="age" name="age" value="{{$record->age}}" class="rounded-lg w-16" type="text" />
+                @error('age')
+                <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                @enderror
               </div>
+           
             </div>
             <div>
               <!-- Phone# -->
@@ -80,9 +107,14 @@
                 <div class="relative h-11 max-w-[16.875rem]">
                   <input
                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                    name='phone_number'
+                    value="{{$record->phone_number}}"
                   />
                 </div>
               </div>
+              @error('phone_number')
+              <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+              @enderror
             </div>
             <!-- ----- -->
             <div>
@@ -94,22 +126,26 @@
                 <div class="relative h-11 max-w-auto mx-5 md:my-5 my-0 mt-5">
                   <select
                     class="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-red-500 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                    name='month_bdate'
+                    
                   >
-                    <option value="brazil">month</option>
-                    <option value="january">january</option>
-                    <option value="febuary">Febuary</option>
-                    <option value="march">March</option>
-                    <option value="april">April</option>
-                    <option value="may">May</option>
-                    <option value="june">June</option>
-                    <option value="july">July</option>
+                    <option >month</option>
+                    <option value="01">january</option>
+                    <option value="02">Febuary</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
                   </select>
+            
                 </div>
                 <div class="relative h-11 max-w-auto mx-5 mt-5">
                   <select
                     class="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-red-500 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                    name='day_bdate'
                   >
-                    <option value="brazil">day</option>
+                    <option >day</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -118,12 +154,14 @@
                     <option value="6">6</option>
                     <option value="7">7</option>
                   </select>
+           
                 </div>
                 <div class="relative h-11 max-w-auto mx-5 mt-5">
                   <select
                     class="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-red-500 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                    name='year_bdate'
                   >
-                    <option value="brazil">year</option>
+                    <option >year</option>
                     <option value="2023">2023</option>
                     <option value="2022">2022</option>
                     <option value="2021">2021</option>
@@ -133,6 +171,7 @@
                     <option value="2017">2017</option>
                   </select>
                 </div>
+           
               </div>
             </div>
             <!-- address -->
@@ -146,53 +185,89 @@
                 <input
                   placeholder="Street Address"
                   class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                  name='street_address'
+                  value="{{$record->street_address}}"
                 />
+                @error('street_address')
+                <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                @enderror
               </div>
               <div class="relative h-11 w-full min-w-[200px]">
                 <input
                   placeholder="Street Address Line 2"
                   class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                  name='street_address_line_2'
+                  value="{{$record->street_address_line_2}}"
                 />
+                @error('street_address_line_2')
+                <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                @enderror
               </div>
               <div class="relative h-11 w-full min-w-[200px]">
                 <input
                   placeholder="City"
                   class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                  name='city'
+                  value="{{$record->city}}"
                 />
+                @error('city')
+                <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                @enderror
               </div>
             </div>
             <!-- 222 -->
             <div
               class="lg:flex space-y-8 justify-center items-center lg:space-x-16 space-x-2 mt-10"
             >
-              <div class="relative h-11 w-full min-w-[200px] lg:mt-6 sm:ms-5">
+              {{-- <div class="relative h-11 w-full min-w-[200px] lg:mt-6 sm:ms-5">
                 <input
                   placeholder="State/Province"
                   class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                  name='state_province'
+                  value=''
                 />
+                @error('state_province')
+                <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                @enderror
               </div>
               <div class="relative h-11 w-full min-w-[200px]">
                 <input
                   placeholder="Postal / Zip Code"
                   class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                  name='postal_zipcode'
+                  value=''
                 />
+                @error('postal_zipcode')
+                <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                @enderror
               </div>
               <div class="relative h-11 w-full min-w-[200px]">
                 <input
                   placeholder="Country"
                   class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
-                />
-              </div>
+                  name='country'
+                  value=''
+                  />
+                  @error('country')
+                  <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                  @enderror
+              </div> --}}
             </div>
             <div class="mt-10">
               <div class="lg:flex justify-center items-center lg:space-x-32">
                 <span>Weight:</span>
                 <div class="relative h-11 w-full min-w-[200px]">
                   <input
-                    placeholder="in cm"
+                    placeholder="in kg"
                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                    name='weight'
+                    value="{{$record->weight}} kg"
                   />
+             
                 </div>
+                @error('weight')
+                <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                @enderror
               </div>
               <div
                 class="lg:flex justify-center items-center lg:space-x-32 mt-10"
@@ -202,7 +277,12 @@
                   <input
                     placeholder="in cm"
                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                    name='height'
+                    value="{{$record->height}} cm"
                   />
+                  @error('height')
+                  <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                  @enderror
                 </div>
               </div>
             </div>
@@ -218,23 +298,33 @@
                   <input
                     placeholder="First Name"
                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                    name='contact_first_name'
+                    value="{{$record->contact_first_name}}"
                   />
                   <label
                     class="after:content[' '] pointer-events-none absolute left-0 -top-2.5 flex h-full w-full select-none text-sm font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-2.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-pink-500 after:transition-transform after:duration-300 peer-placeholder-shown:leading-tight peer-placeholder-shown:text-blue-gray-500 peer-focus:text-sm peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:after:scale-x-100 peer-focus:after:border-pink-500 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
                   >
                     First Name
                   </label>
+                  @error('contact_first_name')
+                  <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                  @enderror
                 </div>
                 <div class="relative h-11 w-full min-w-[200px]">
                   <input
                     placeholder="Last Name"
                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                    name='contact_last_name'
+                    value="{{$record->contact_last_name}}"
                   />
                   <label
                     class="after:content[' '] pointer-events-none absolute left-0 -top-2.5 flex h-full w-full select-none text-sm font-normal leading-tight text-blue-gray-500 transition-all after:absolute after:-bottom-2.5 after:block after:w-full after:scale-x-0 after:border-b-2 after:border-pink-500 after:transition-transform after:duration-300 peer-placeholder-shown:leading-tight peer-placeholder-shown:text-blue-gray-500 peer-focus:text-sm peer-focus:leading-tight peer-focus:text-pink-500 peer-focus:after:scale-x-100 peer-focus:after:border-pink-500 peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
                   >
                     Last Name
                   </label>
+                  @error('contact_last_name')
+                  <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                  @enderror
                 </div>
               </div>
               <!-- address -->
@@ -248,43 +338,74 @@
                   <input
                     placeholder="Street Address"
                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                    name='contact_street_address'
+                    value="{{$record->contact_street_address}}"
                   />
+                  @error('contact_street_address')
+                  <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                  @enderror
                 </div>
                 <div class="relative h-11 w-full min-w-[200px]">
                   <input
                     placeholder="Street Address Line 2"
                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                    name='contact_street_address_line_2'
+                    value="{{$record->contact_street_address_line_2}}"
+
                   />
+                  @error('contact_street_address_line_2')
+                  <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                  @enderror
                 </div>
                 <div class="relative h-11 w-full min-w-[200px]">
                   <input
                     placeholder="City"
                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
-                  />
+                    name='contact_city'
+                    value="{{$record->contact_city}}"
+                    />
+                    @error('contact_city')
+                    <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                    @enderror
                 </div>
               </div>
               <!-- 222 -->
               <div
                 class="lg:flex space-y-8 justify-center items-center lg:space-x-16 space-x-2 mt-10"
               >
-                <div class="relative h-11 w-full min-w-[200px] lg:mt-6">
+                {{-- <div class="relative h-11 w-full min-w-[200px] lg:mt-6">
                   <input
                     placeholder="State/Province"
                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                    name='contact_state_province'
+                    value=''
                   />
-                </div>
-                <div class="relative h-11 w-full min-w-[200px]">
+                  @error('contact_state_province')
+                  <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                  @enderror
+                </div> --}}
+                {{-- <div class="relative h-11 w-full min-w-[200px]">
                   <input
                     placeholder="Postal / Zip Code"
                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                    name='contact_postal_zipcode'
+                    value=''
                   />
-                </div>
-                <div class="relative h-11 w-full min-w-[200px]">
+                  @error('contact_postal_zipcode')
+                  <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                  @enderror
+                </div> --}}
+                {{-- <div class="relative h-11 w-full min-w-[200px]">
                   <input
                     placeholder="Country"
                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                    name='contact_country'
+                    value=''
                   />
-                </div>
+                  @error('contact_country')
+                  <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                  @enderror
+                </div> --}}
               </div>
             </div>
             <h3 class="mt-6 font-medium">
@@ -294,7 +415,12 @@
               <input
                 placeholder="Phone Number"
                 class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                name='contact_phone_number'
+                value="{{$record->contact_phone_number}}"
               />
+              @error('contact_phone_number')
+              <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+              @enderror
             </div>
             <!-- Gemeral Med His. -->
             <div>
@@ -307,13 +433,15 @@
               </h4>
               <div>
                 <div class="mt-3">
-                  <input type="radio" name="radio1" id="yes" />
+                  <input type="radio" name="hepa" value="Yes" id="yes" />
                   <label for="yes">Yes</label>
+                  
                 </div>
                 <div class="mt-3">
-                  <input type="radio" name="radio1" id="no" />
+                  <input type="radio" name="hepa" value="No" id="no" />
                   <label for="no">No</label>
                 </div>
+          
               </div>
             </div>
             <!-- immune -->
@@ -331,11 +459,11 @@
                 <div>
                   <div>
                     <div>
-                      <input type="radio" id="pox1" name="pox" />
+                      <input type="radio" id="pox1" name="chicken_pox" value="IMMUNE" />
                       <label for="pox1">IMMUNE</label>
                     </div>
                     <div class="mt-3">
-                      <input type="radio" id="pox2" name="pox" />
+                      <input type="radio" id="pox2" name="chicken_pox" value="NOT IMMUNE" />
                       <label for="pox2">NOT IMMUNE</label>
                     </div>
                   </div>
@@ -349,11 +477,11 @@
                 <div>
                   <div>
                     <div>
-                      <input type="radio" name="measle" id="measle1" />
+                      <input type="radio" name="measle" value="IMMUNE" id="measle1" />
                       <label for="measle1">IMMUNE</label>
                     </div>
                     <div class="mt-3">
-                      <input type="radio" name="measle" id="measle2" />
+                      <input type="radio" name="measle" value="NOT IMMUNE" id="measle2" />
                       <label for="measle2">NOT IMMUNE</label>
                     </div>
                   </div>
@@ -432,6 +560,7 @@
                         <input
                           id="other1"
                           name="other1"
+                          value=""
                           class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
                         />
                       </div>
@@ -461,9 +590,9 @@
                     <div class="flex items-center mt-2">
                       <input
                         type="checkbox"
-                        name="infeections"
-                        id="infeections"
-                        value="Ear Infeections"
+                        name="infections"
+                        id="infections"
+                        value="Ear Infections"
                       />
                       &nbsp;
                       <label for="infeections">Ear Infeections</label>
@@ -533,6 +662,7 @@
                           id="other2"
                           name="other2"
                           class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                          value=""
                         />
                       </div>
                     </div>
@@ -553,6 +683,7 @@
                         type="checkbox"
                         name="congenital"
                         id="congenital"
+
                       />
                       &nbsp;
                       <label for="congenital">Congenital Defects</label>
@@ -567,6 +698,7 @@
                   <textarea
                     class="mt-4"
                     name="textarea1"
+                    value="{{$record->textarea1}}"
                     id=""
                     cols="40"
                     rows="2"
@@ -575,15 +707,27 @@
               </div>
             </div>
             <!-- insureance -->
-
+            <div class="flex space-x-5 justify-end ">
             <div class="text-center mt-10">
               <input
                 class="bg-black text-white py-2 px-4"
                 type="submit"
-                value="Submit Form"
+                value="Update Form"
               />
             </div>
+            <div class="text-center mt-10">
+              <form action="POST" action="/admin/{{$record->id}}">
+                @csrf
+                @method('DELETE')
+               <button  class="bg-red-600 text-white py-2 px-4">
+                 Delete Record
+                </button>
+              </form>
+            </div>
+          </div>
+          </div>
           </form>
+
         </div>
       </div>
     </div>

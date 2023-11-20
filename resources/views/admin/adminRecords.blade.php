@@ -198,19 +198,21 @@
                   </th>
                 </tr>
               </thead>
+              @foreach($records as $record)
+
               <tbody class="">
                 <tr class="border-b dark:border-neutral-500">
                   <td class="whitespace-nowrap px-6 py-4 text-center border">
-                    P-01
+                    {{$record->id}}
                   </td>
                   <td class="whitespace-nowrap px-6 py-4 text-center border">
-                    Radores , Charles Lester A.
+                    {{$record->last_name}} , {{$record->first_name}} {{$record->middle_name}}.
                   </td>
                   <td class="whitespace-nowrap px-6 py-4 text-center border">
-                    Male
+                    {{$record->gender}}
                   </td>
                   <td class="whitespace-nowrap px-6 py-4 text-center border">
-                    18
+                    {{$record->age}}
                   </td>
                   <td class="whitespace-nowrap px-6 py-4 text-center border">
                     2023-05-15
@@ -221,16 +223,18 @@
                     <button
                       class="px-3 py-1 bg-green-600 text-white font-medium rounded-md"
                     >
-                      Edit
+                      <a href="/admin/{{$record->id}}/adminEditRecords">Edit</a>
                     </button>
                     <button
                       class="px-3 py-1 bg-blue-500 text-white font-medium rounded-md"
                     >
-                      <a href="/adminRecordView"> View </a>
+                    <a href="/admin/{{$record->id}}"> View </a>
+                    {{-- <a href="/admin/adminRecordView"> View </a> --}}
                     </button>
                   </td>
                 </tr>
               </tbody>
+              @endforeach
             </table>
           </div>
         </div>

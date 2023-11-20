@@ -136,8 +136,9 @@
     </nav>
     @include('partials._sidebar')
     @yield('data')
-
+    
     <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>
+    <x-flash-message />
   </body>
 </html>

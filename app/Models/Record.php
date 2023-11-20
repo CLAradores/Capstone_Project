@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Records extends Model
+class Record extends Model
 {
     use HasFactory;
 
@@ -38,9 +38,23 @@ class Records extends Model
         'contact_phone_number',
         'hepa',
         'chicken_pox',
-        'medical_history',
-        'allergies',
-        'list_reg_med',
+        // 'medical_history',
+        // 'allergies',
+        // 'list_reg_med',
 
     ];
+
+
+    public function scopeFilter($query, array $filters) {
+        if ($filters['id'] ??false) {
+         $query->where('id', 'like', '%' . request('id') . '%');
+        };
+  
+        
+     
+     }
 }
+// Route::get('admin/{records}', [RecordsController::class,'adminRecordView']); //view Each record
+
+// <a href="/admin/adminRecordView/{{$record->id}}"> View </a>
+// <a href="/admin/adminRecordView"> View </a>
