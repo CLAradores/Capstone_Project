@@ -18,8 +18,10 @@ class RecordsController extends Controller
     }
 
     public function  adminRecords() {
-        $records = Record::all();
-        return view('admin.adminRecords', ['records' => $records]);
+        // $records = Record::all();
+        return view('admin.adminRecords', [
+            'records' => Record::latest()->filter(request(['search']))->paginate(10)
+    ]);
     }
     
     public function  adminAddRecords() {

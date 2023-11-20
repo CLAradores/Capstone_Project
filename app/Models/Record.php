@@ -47,8 +47,16 @@ class Record extends Model
 
     public function scopeFilter($query, array $filters) {
         if ($filters['id'] ??false) {
-         $query->where('id', 'like', '%' . request('id') . '%');
-        };
+            $query->where('id', 'like', '%' . request('id') . '%');
+           }
+        if ($filters['search'] ??false) {
+            $query->where('first_name' , 'like', '%' . request('search') . '%')
+            ->orWhere('last_name' , 'like', '%' . request('search') . '%')
+            ->orWhere('gender' , 'like', '%' . request('search') . '%')
+            ->orWhere('city' , 'like', '%' . request('search') . '%')
+            ->orWhere('age' , 'like', '%' . request('search') . '%')
+            ->orWhere('id' , 'like', '%' . request('search') . '%');
+           }
   
         
      

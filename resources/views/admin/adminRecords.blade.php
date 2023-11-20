@@ -124,7 +124,7 @@
           </ul>
         </div>
       </div>
-      <form>
+      {{-- <form>
         <label
           for="default-search"
           class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -163,7 +163,8 @@
             Search
           </button>
         </div>
-      </form>
+      </form> --}}
+      @include('partials._search')
     </div>
 
     <!-- drop -->
@@ -198,6 +199,7 @@
                   </th>
                 </tr>
               </thead>
+              @unless(count($records)==0)
               @foreach($records as $record)
 
               <tbody class="">
@@ -235,10 +237,19 @@
                 </tr>
               </tbody>
               @endforeach
+              {{-- @else
+<p>No Record Found</p>
+              @endunless --}}
             </table>
           </div>
         </div>
       </div>
+      @else
+      <p>No Record Found</p>
+                    @endunless
+    </div>
+    <div class="mt-6 p-4">
+      {{$records->links()}}
     </div>
   </div>
 @endsection
