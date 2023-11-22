@@ -11,7 +11,9 @@
                 @csrf
                 <div class="mb-4">
                     <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email or Phone Number</label>
-                    <input type="text" id="email" name="email" class="w-full border rounded px-3 py-2" />
+                    <input  class="w-full border rounded px-3 py-2" id="email" type="email" name="email" value="{{ old('email', $signupEmail ?? '') }}" required autocomplete="email" autofocus>
+
+
                 </div>
                 <div class="mb-4">
                     <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>

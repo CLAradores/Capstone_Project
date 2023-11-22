@@ -6,12 +6,16 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
     public function showLoginForm()
     {
-        return view('auth.login');
+      
+        $signupEmail = Session::get('signup_email');
+Session::forget('signup_email');
+return view('auth.login', compact('signupEmail'));
     }
 
     public function login(Request $request)
@@ -62,6 +66,8 @@ class AuthController extends Controller
             'password' => 'required|string|min:4|confirmed',
         ]);
         
+          Session::put('signup_email', $request->input('email'));
+        
      // Remove spaces from the contact number before storing
      $contactNumber = str_replace(' ', '', $request->input('contact_number'));
 
@@ -82,6 +88,7 @@ class AuthController extends Controller
         ]);
 
         return redirect('/login')->with('success', 'Registration successful! Please log in.');
+
         
     }
 }
