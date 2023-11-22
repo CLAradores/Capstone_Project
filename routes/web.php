@@ -26,6 +26,7 @@ Route::post('/appointment', [AppointmentController::class, 'store']);
 Route::get('/appointment/index', [AppointmentController::class, 'display']);
 
 
+
 // ----------------------------------
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
@@ -36,19 +37,19 @@ Route::post('/register', [AuthController::class, 'register']);
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
-Route::get('/blogs/create', [BlogController::class, 'create'])->name('blogs.create');
-Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
+// Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
+// Route::get('/blogs/create', [BlogController::class, 'create'])->name('blogs.create');
+// Route::post('/blogs', [BlogController::class, 'store'])->name('blogs.store');
 
 // Admin Authentication Routes
 
-Route::prefix('admin')->group(function () {
-    Route::get('login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
-    Route::post('login', [AdminAuthController::class, 'login']);
-    Route::get('register', [AdminAuthController::class, 'showRegistrationForm'])->name('admin.register');
-    Route::post('register', [AdminAuthController::class, 'register']);
-    Route::post('logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
-});
+// Route::prefix('admin')->group(function () {
+//     Route::get('login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
+//     Route::post('login', [AdminAuthController::class, 'login']);
+//     Route::get('register', [AdminAuthController::class, 'showRegistrationForm'])->name('admin.register');
+//     Route::post('register', [AdminAuthController::class, 'register']);
+//     Route::post('logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
+// });
 // ----------------------------------------------------------------
 Route::get('/', function () {
     return view('home');

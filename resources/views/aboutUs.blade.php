@@ -1,17 +1,28 @@
 @extends('layout')
 
 @section('content')
-<section class="bg-black text-white max">
+<section class="bg-black text-white max" style="
+background: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  ),
+  url(../img/aboutushero.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+height: 50%;
+width: 100%;
+">
     <div class="max-w-7xl m-auto">
       <h1
         style="height: 50vh"
-        class="lg:text-4xl text-2xl font-bold text-center flex items-center ml-5"
+        class="lg:text-5xl text-2xl font-bold text-center flex items-center ml-5"
       >
         About Us
       </h1>
     </div>
   </section>
-  <section class="mt-20 text-center">
+  <section class="mt-10 text-center">
     <h2 class="lg:text-4xl text-2xl font-semibold mb-10">Who We Are</h2>
     <p class="w-2/3 mx-auto hero--text2">
       "We are a dedicated healthcare platform, committed to pioneering
@@ -67,11 +78,11 @@
     <!-- ------ -->
     <div class="flex flex-col text-center justify-center items-center mx-10">
       <img
-        src="../img/m5.jpeg"
+        src="../img/gab.png"
         alt="img"
         style="height: 19rem; width: 13rem"
       />
-      <h4 class="mb-4 mt-4">(Font-End Developer)</h4>
+      <h4 class="mb-4 mt-4">(Full-Stack Developer)</h4>
       <div class="flex justify-center text-xl space-x-10">
         <button
           data-tooltip-target="tooltip-default1"
@@ -169,7 +180,7 @@
         alt="img"
         style="height: 19rem; width: 13rem"
       />
-      <h4 class="mb-4 mt-4">(Font-End Developer)</h4>
+      <h4 class="mb-4 mt-4">(Full-Stack Developer)</h4>
       <div class="flex justify-center text-xl space-x-10">
         <button
           data-tooltip-target="tooltip-default6"
@@ -263,11 +274,11 @@
       class="flex flex-col text-center justify-center items-center mx-10 my-20"
     >
       <img
-        src="../img/m5.jpeg"
+        src="../img/charles.png"
         alt="img"
         style="height: 19rem; width: 13rem"
       />
-      <h4 class="mb-4 mt-4">(Font-End Developer)</h4>
+      <h4 class="mb-4 mt-4">(Full-Stack Developer)</h4>
       <div class="flex justify-center text-xl space-x-10">
         <button
           data-tooltip-target="tooltip-default11"

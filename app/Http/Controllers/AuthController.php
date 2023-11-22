@@ -55,11 +55,11 @@ class AuthController extends Controller
             'date_of_birth' => 'required|date',
             'contact_number' => [
                 'required',
-                'regex:/^\d{4} \d{3} \d{4}$/',
+                'regex:/^\d{4} \d{4} \d{3}$/',
                 Rule::unique('users', 'contact_number')->ignore(Auth::id()), // Ignore the current user's contact number
             ],
             'email' => 'required|email|unique:users|max:255',
-            'password' => 'required|string|min:8|confirmed',
+            'password' => 'required|string|min:4|confirmed',
         ]);
         
      // Remove spaces from the contact number before storing

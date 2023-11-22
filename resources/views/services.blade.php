@@ -1,11 +1,22 @@
 @extends('layout')
 
 @section('content')
-<section class="bg-black eventheroIMG text-white">
+<section class="bg-black eventheroIMG text-white" style="
+background: linear-gradient(
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  ),
+  url(../img/serviceshero.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+height: 50%;
+width: 100%;
+">
     <div class="max-w-7xl m-auto">
       <h1
         style="height: 50vh"
-        class="lg:text-4xl text-2xl font-bold text-center flex items-center ml-5"
+        class="lg:text-5xl text-2xl font-bold text-center flex items-center ml-5"
       >
         Services
       </h1>

@@ -19,13 +19,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    <title>Document</title>
+    <title>KodeCenter</title>
   </head>
   <body>
 
       <nav
         class="fixed  top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700"
-      >
+        style=" font-family: Poppins, sans-serif">
         <div class="px-3 py-3 lg:px-5 lg:pl-3 w-9/12 mx-auto">
           <div class="flex items-center justify-between">
             <div class="flex items-center justify-start rtl:justify-end ">
@@ -51,15 +51,15 @@
                   ></path>
                 </svg>
               </button>
-              <a href="https://flowbite.com" class="flex ms-2 md:me-24">
+              <a href="/" class="flex ms-2 md:me-24">
                 <img
-                  src="https://flowbite.com/docs/images/logo.svg"
+                src="../img/healthlogo2.png"
                   class="h-8 me-3"
                   alt="FlowBite Logo"
                 />
                 <span
                   class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"
-                  >Flowbite</span
+                  >KodeCenter</span
                 >
               </a>
             </div>
@@ -137,13 +137,20 @@
         </div>
       </nav>
    
-  <div class="flex justify-center items-center mt-20 ">
+      <div class="flex justify-start items-left text-left mt-28 max-w-8xl mx-auto">
+  
+        <h1 class="text-2xl font-semibold flex justify-center items-center">
+          Appointment Details:
+        </h1>
+      </div>
+  <div class="flex flex-col justify-center items-center  ">
     <div class="flex flex-col justify-center items-center " style="height: 53.8vh">
 
     
 
 
     <table class=" table-auto w-[90vw] text-sm text-center rtl:text-right text-gray-500 dark:text-gray-400  max-w-screen-2xl mx-auto ">
+      
         <thead class=" text-xs text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr class="hover:bg-green-50 ">
                 

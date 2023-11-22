@@ -205,7 +205,7 @@
     </div>
 
     <div class="text-right mr-20 font-medium hover:underline">
-      <a href="services.html">View all services</a>
+      <a href="/services">View all services</a>
     </div>
 
   </section>

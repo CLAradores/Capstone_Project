@@ -52,13 +52,13 @@
             </div>
     
             <div>
-                <label for="date_of_birth" class="block text-gray-700 text-sm font-bold mb-2">Date of Birth</label>
-                <input type="text" id="date_of_birth" name="date_of_birth" placeholder="mm/dd/yyyy" value="{{ old('date_of_birth') }}" class="w-full border rounded px-3 py-2" required>
+                {{-- <label for="date_of_birth" class="block text-gray-700 text-sm font-bold mb-2">Date of Birth</label>
+                <input type="text" id="date_of_birth" name="date_of_birth" placeholder="mm/dd/yyyy" value="{{ old('date_of_birth') }}" class="w-full border rounded px-3 py-2" required> --}}
+                @include('partials._date')
             </div>
     
             <div>
-                <label for="contact_number" class="block text-gray-700 text-sm font-bold mb-2">Contact Number</label>
-                <input type="text" id="contact_number" name="contact_number" placeholder="0012 345 6789" value="{{ old('contact_number') }}" class="w-full border rounded px-3 py-2" required>
+                @include('partials._phoneNumber')
             </div>
     
             <div>

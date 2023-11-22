@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Croissant+One&family=Dancing+Script&family=Kanit:ital,wght@0,300;0,400;0,500;0,700;0,800;1,200;1,300;1,400;1,500;1,900&family=Mohave:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Oswald:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;1,400;1,500;1,900&display=swap" rel="stylesheet">
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.css"
       rel="stylesheet"
@@ -16,28 +19,28 @@
  
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-    <title>Document</title>
+    <title>KodeCenter</title>
   </head>
   <body>
     <nav
       class="border-gray-200 dark:bg-gray-900"
-      style="background-color: #98fb98"
+      style="background-color: #98fb98; font-family: Poppins, sans-serif"
     >
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
         <a
-          href="https://flowbite.com/"
+          href="/"
           class="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img
-            src="https://flowbite.com/docs/images/logo.svg"
+            src="img/healthlogo2.png"
             class="h-8"
             alt="Flowbite Logo"
           />
           <span
-            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-            >Flowbite</span
+            class="self-center text-2xl font-bold whitespace-nowrap dark:text-white"
+            >KodeCenter</span
           >
         </a>
         <button
@@ -71,7 +74,7 @@
             <li>
               <a
                 href="/"
-                class="border-green-200 text-blue-500 font-bold block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >Home</a
               >
             </li>
@@ -120,38 +123,20 @@
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" class="flex items-center">
+            <a href="/" class="flex items-center">
               <img
-                src="https://flowbite.com/docs/images/logo.svg"
+              src="img/healthlogo2.png"
                 class="h-8 me-3"
                 alt="FlowBite Logo"
               />
               <span
                 class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-                >Flowbite</span
+                >KodeCenter</span
               >
             </a>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
-              <h2
-                class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
-              >
-                Resources
-              </h2>
-              <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                  <a href="https://flowbite.com/" class="hover:underline"
-                    >Flowbite</a
-                  >
-                </li>
-                <li>
-                  <a href="https://tailwindcss.com/" class="hover:underline"
-                    >Tailwind CSS</a
-                  >
-                </li>
-              </ul>
-            </div>
+            
             <div>
               <h2
                 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
@@ -161,14 +146,14 @@
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
                   <a
-                    href="https://github.com/themesberg/flowbite"
+                    href="https://github.com/charles1stgithub/Capstone_Project.git"
                     class="hover:underline"
                     >Github</a
                   >
                 </li>
                 <li>
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
+                    href="https://discord.com"
                     class="hover:underline"
                     >Discord</a
                   >
@@ -183,10 +168,10 @@
               </h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
-                  <a href="#" class="hover:underline">Privacy Policy</a>
+                  <a href="https://en.wikipedia.org/wiki/Privacy_policy" class="hover:underline">Privacy Policy</a>
                 </li>
                 <li>
-                  <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                  <a href="https://www.mcehospital.com/terms-conditions" class="hover:underline">Terms &amp; Conditions</a>
                 </li>
               </ul>
             </div>
@@ -196,14 +181,14 @@
           class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
         />
         <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400 font-semibold"
             >© 2023
-            <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a
+            <a href="/" class="hover:underline font-bold">KodeCenter™</a
             >. All Rights Reserved.
           </span>
           <div class="flex mt-4 sm:justify-center sm:mt-0">
             <a
-              href="#"
+              href="https://facebook.com"
               class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <svg
@@ -222,7 +207,7 @@
               <span class="sr-only">Facebook page</span>
             </a>
             <a
-              href="#"
+              href="https://facebook.com"
               class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
               <svg
@@ -239,7 +224,7 @@
               <span class="sr-only">Discord community</span>
             </a>
             <a
-              href="#"
+              href="https://discord.com"
               class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
               <svg
@@ -258,7 +243,7 @@
               <span class="sr-only">Twitter page</span>
             </a>
             <a
-              href="#"
+              href="https://twitter.com"
               class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
               <svg
@@ -277,7 +262,7 @@
               <span class="sr-only">GitHub account</span>
             </a>
             <a
-              href="#"
+              href="https://github.com"
               class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
             >
               <svg

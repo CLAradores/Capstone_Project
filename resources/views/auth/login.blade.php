@@ -4,8 +4,8 @@
 
 @section('content')
 
-    <div class="min-h-screen flex items-center justify-center shadow-xl">
-        <div class="bg-white p-8 rounded shadow-2xl w-96">
+    <div class="flex items-center justify-center shadow-xl h-[37rem]">
+        <div class=" p-8 rounded shadow-2xl w-96  ">
             <h2 class="text-3xl font-semibold mb-6 text-center">Sign in to your account</h2>
             <form method="POST" action="{{ route('login') }}">
                 @csrf
