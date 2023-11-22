@@ -45,21 +45,44 @@
            
             <div class="row g-3">
            
-             
+              <div class="flex justify-between ">
               
-              
-              <div class="col-md-12">
-                <h6 class="ml-1 mt-3"> Patient's Name</h6>
-                <input
-                  type="text"
-                  name="first_name"
-                  class="form-control"
-                  placeholder="Juan"
-                  pattern="[A-Z\sa-z]{3,20}"
-                  {{-- required --}}
-                />@error('first_name')
-                <span class="text-red-500">{{$message}}</span>
-              @enderror
+                <div class="flex justify-between space-x-10 w-4/5">
+  
+                  <div class="w-full">
+                    <h6 class="ml-1 mt-3"> Patient's First Name</h6>
+                    <input
+                      type="text"
+                      name="first_name"
+                      class="form-control "
+                      pattern="[A-Z\sa-z]{3,20}"
+                      {{-- required --}}
+                    />@error('first_name')
+                    <span class="text-red-500">{{$message}}</span>
+                  @enderror
+                  </div>
+  
+                  <div class="w-full">
+                    <h6 class="ml-1 mt-3"> Patient's Last Name</h6>
+                    <input
+                      type="text"
+                      class="form-control "
+                      name="last_name"
+                    />
+                  </div>
+  
+                </div>
+                <div class="w-1/12 mr-16">
+                  <h6 class="ml-1 mt-3"> Age</h6>
+                  <input
+                    type="text"
+                    name="age"
+                    class="form-control "
+                    required
+                  />@error('age')
+                  <span class="text-red-500">{{$message}}</span>
+                @enderror
+                </div>
               </div>
               
            
@@ -70,19 +93,24 @@
                   class="form-control"
                   placeholder="Date of Birth"
                   name="birth_date"
-                  {{-- required --}}
+                  required
                 />
+                @error('age')
+                  <span class="text-red-500">{{$message}}</span>
+                @enderror
               </div>
 
               <div class="col-4"><h6 class="ml-1 mt-3">Gender <span class="text-red-500"> *</span></h6>
                 <select
                   class="form-select"
                   name="gender"
-                  {{-- required --}}
+                  required
+                  @error('age')
+                  <span class="text-red-500">{{$message}}</span>
+                @enderror
                 >
-                  
-                  <option value="M">Male</option>
-                  <option value="F">Female</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
                 </select>
               </div>
               <div class="col-md-4"><h6 class="ml-1 mt-3">Mobile Number <span class="text-red-500"> *</span></h6>
@@ -96,35 +124,39 @@
                   {{-- required --}}
                 />
               </div>
-              <div class="col-md-8"><h6 class="ml-1 mt-3">Home Address <span class="text-red-500"> *</span></h6>
-                <input
-                  type="text"
-                  name="address"
-                  class="form-control"
-                  placeholder="212 Zone 3, Barangay Sta. Ignacia, Tarlac City"
-                  {{-- required --}}
-                />
-              </div>
-              
-              
-            
-              <div class="col-4">
-                <h6 class="ml-1 mt-3">Services Available <span class="text-red-500"> *</span></h6>
+              <div class="flex justify-between items-center  space-x-5">
 
-                <select
-                type="text"
-                name="service_type"
-                  class="form-select"
-                  {{-- required --}}
-                >
-                  <option value="">Select Health Service</option>
-                  <option value="Monday: Kid's Check-up">Monday: Kid's Check-up</option>
-                  <option value="Tuesday: Pre-natal Check-up">Tuesday: Pre-natal Check-up</option>
-                  <option value="Wednesday: Adult's Check-up">Wednesday: Adult's Check-up</option>
-                  <option value="Thursday: Senior Citezen's Check-up">Thursday: Senior Citezen's Check-up</option>
-                  <option value="Friday: PWD's Check-up">Friday: PWD's Check-up</option>
-                  <option value="Saturday: Dental Check-up">Saturday: Dental Check-up</option>
-                </select>
+                <div class="flex flex-col w-full">
+                  <label class="ml-1 mt-3" for="appointment_date">Appointment Date <span class="text-red-500"> *</span></label>
+                  <input class="form-control" type="date" name="appointment_date" id="appointment_date" required>
+                </div>
+
+                <div class="w-full"><h6 class="ml-1 mt-3">Home Address <span class="text-red-500"> *</span></h6>
+                  <input
+                    type="text"
+                    name="address"
+                    class="form-control"
+                    placeholder="212 Zone 3, Barangay Sta. Ignacia, Tarlac City"
+                    {{-- required --}}
+                  />
+                </div>
+                
+                
+              
+                <div class="w-full">
+                  <h6 class="ml-1 mt-3">Services Available <span class="text-red-500"> *</span></h6>
+  
+                  <select
+                  type="text"
+                  name="service_type"
+                    class="form-select"
+                    required
+                  >
+                  @foreach ($serviceTypes as $type)
+                  <option value="{{ $type }}">{{ $type }}</option>
+              @endforeach
+                  </select>
+                </div>
               </div>
 
               <div class="col-12"> <h6 class="mt-3">

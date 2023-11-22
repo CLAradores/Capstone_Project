@@ -40,6 +40,7 @@
                     type="text"
                     class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                     name="event_title"
+                    value={{$event->event_title}}
 
                   />
                   @error('event_title')
@@ -52,6 +53,7 @@
                     type="text"
                     class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                     name="event_location"
+                    value={{$event->event_location}}
                   />
                   @error('event_location')
                   <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
@@ -68,6 +70,8 @@
                         class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                         placeholder="25/02/2020"
                         name="event_date"
+                        value={{$event->event_date}}
+
                       />
                       <div class="absolute left-3 top-2">
                         <svg
@@ -100,6 +104,7 @@
                         class="pr-4 pl-10 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
                         placeholder="00:00 am"
                         name="event_time"
+                        value={{$event->event_time}}
                       />
                       <div class="absolute left-3 top-2">
                         <svg
@@ -128,8 +133,10 @@
                   <input
                     type="text"
                     class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600"
+
                     {{-- placeholder="Optional" --}}
                     name="event_description"
+                    value={{$event->event_description}}
                   />
                   @error('event_description')
                   <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>

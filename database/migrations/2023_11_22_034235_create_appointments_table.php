@@ -13,13 +13,18 @@ return new class extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id('id');
-            $table->string('first_name');
-            $table->string('gender');
-            $table->date('birth_date');
-            $table->string('phone');
-            $table->string('address');
+            $table->string('gender')->default('');
+            $table->integer('age')->default(0);
+            $table->date('birth_date')->nullable();
+            $table->string('phone')->default('');
+            $table->string('appointment_status')->default('');
             $table->string('service_type');
-            $table->text('concern');
+            $table->date('appointment_date');
+            $table->unsignedInteger('queue_number');
+            $table->string('last_name')->default(''); // Add this line
+            $table->string('first_name')->default(''); // Add this line
+            $table->string('address')->default(''); // Add this line
+            $table->string('concern')->default(''); // Add this line
             $table->timestamps();
         });
     }

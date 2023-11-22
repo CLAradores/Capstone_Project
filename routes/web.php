@@ -22,8 +22,14 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/appointment/index', [AppointmentController::class, 'index'])->name('appointments.index'); //show appointment Index
 // Route::get('/appointments', [AppointmentController::class, 'index'])->name('appointments.index'); //show appointment Index
 Route::get('/appointment', [AppointmentController::class, 'create'])->name('appointments.create-mon'); //show apppoinment Form
+
 Route::post('/appointment', [AppointmentController::class, 'store']);
+// Route::post('/appointment', [AppointmentController::class, 'bookAppointment ']);
 Route::get('/appointment/index', [AppointmentController::class, 'display']);
+
+Route::get('/admin/adminAppointment', [AppointmentController::class, 'displaytoAdmin']);
+
+Route::delete('/admin/{appointments}', [AppointmentController::class, 'destroy'])->name('appointment.destroy');
 
 
 

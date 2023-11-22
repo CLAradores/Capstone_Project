@@ -7,7 +7,7 @@
   </div>
 
   <section
-    style="height: 100%; width: 100%"
+    style="height: 75%; width: 100%"
     class="max-w-7xl m-auto flex flex-col justify-center"
   >
     <div
@@ -204,7 +204,7 @@
       </div>
     </div>
 
-    <div class="text-right mr-20 font-medium hover:underline">
+    <div class="text-right mr-20 font-medium hover:underline text-xl">
       <a href="/services">View all services</a>
     </div>
 

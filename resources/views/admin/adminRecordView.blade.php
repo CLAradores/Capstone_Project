@@ -116,9 +116,9 @@
             {{-- @foreach($meds as $med) --}}
 
            
-            <li><span class="font-bold text-xl">&#x2022;</span> Shabu</li>
-            <li><span class="font-bold text-xl">&#x2022;</span> Cocaine</li>
-            <li><span class="font-bold text-xl">&#x2022;</span> Marijuna</li>
+            <li><span class="font-bold text-xl">&#x2022;</span> Paracetamol</li>
+            <li><span class="font-bold text-xl">&#x2022;</span> Bio Flu</li>
+            <li><span class="font-bold text-xl">&#x2022;</span> Loperamaid</li>
             {{-- @endforeach --}}
           </ul>
         </div>

@@ -12,13 +12,13 @@
           <form  class="mt-6" method="POST" action="/admin/{{$record->id}}" >
             @csrf 
             @method('PUT')
-            <h3 class="mt-6 font-medium lg-mb-0 mb-10">
+            <h3 class="mt-6 font-medium lg-mb-0 ">
               Name <span class="text-red-500"> * </span>
             </h3>
             <div
               class="lg:flex space-y-8 justify-center items-center lg:space-x-16 space-x-2"
             >
-              <div class="relative h-11 w-full min-w-[200px] lg:mt-6">
+              <div class="relative  w-full min-w-[200px] lg:mt-0">
                 <input
                   placeholder="First Name"
                   class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
@@ -255,7 +255,7 @@
             <div
               class="lg:flex space-y-8 justify-center items-center lg:space-x-16 space-x-2"
             >
-              <div class="relative h-11 w-full min-w-[200px] lg:mt-6">
+              <div class="relative  w-full min-w-[200px] lg:mt-0">
                 <input
                   placeholder="Street Address"
                   class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
@@ -266,7 +266,7 @@
                 <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
                 @enderror
               </div>
-              <div class="relative h-11 w-full min-w-[200px]">
+              <div class="relative  w-full min-w-[200px]">
                 <input
                   placeholder="Street Address Line 2"
                   class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"

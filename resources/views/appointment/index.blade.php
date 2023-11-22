@@ -137,14 +137,14 @@
         </div>
       </nav>
    
-      <div class="flex justify-start items-left text-left mt-28 max-w-8xl mx-auto">
+      <div class="flex justify-start items-left text-left mt-28 max-w-7xl mx-auto">
   
         <h1 class="text-2xl font-semibold flex justify-center items-center">
           Appointment Details:
         </h1>
       </div>
-  <div class="flex flex-col justify-center items-center  ">
-    <div class="flex flex-col justify-center items-center " style="height: 53.8vh">
+  <div class="flex flex-col justify-center items-center  max-w-6xl mx-auto">
+    <div class="flex flex-col justify-center items-center  mt-10 ">
 
     
 
@@ -154,48 +154,37 @@
         <thead class=" text-xs text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr class="hover:bg-green-50 ">
                 
-                {{-- <th scope="col" class="px-6 py-3 ">
-                    Queue No.
-                </th> --}}
-                <th scope="col" class="px-6 py-3 border">
-                    Name
-                </th>
-                <th scope="col" class="px-6 py-3 border">
-                    Gender
-                </th>
-                <th scope="col" class="px-6 py-3 border">
-                  Date of Birth
-                </th>
               
                 <th scope="col" class="px-6 py-3 border">
-                  Service Type
+                  Queue Number
                 </th>
-              
                 <th scope="col" class="px-6 py-3 border">
                   Concern Details
                 </th>
                 <th scope="col" class="px-6 py-3 border">
-                  Contact Number
+                  Service Type
                 </th>
                 <th scope="col" class="px-6 py-3 border">
-                Serve
+                  Appointment Date
                 </th>
-                
-                
+                <th scope="col" class="px-6 py-3 border">
+                  Status
+                </th>
             </tr>
           <hr/>
             
+          {{-- <th scope="col" class="px-6 py-3 font-normal	text-gray-900 border">{{$appointment->service_type}}</td> --}}
+
           </thead>
           <tbody>
               @foreach($appointments as $appointment )
               <tr class="hover:bg-green-50 	">
-                 <th scope="col" class="px-6 py-3 font-normal text-gray-900 border">{{$appointment->id}}</td> 
-                  <th scope="col" class="px-6 py-3 font-normal	text-gray-900  border">{{$appointment->first_name}} </td>
-                    <th scope="col" class="px-6 py-3 font-normal text-gray-900	 border">{{$appointment->gender}}</td>
-                      <th scope="col" class="px-6 py-3 font-normal	 text-gray-900 border">{{$appointment->birth_date}}</td>
-                        <th scope="col" class="px-6 py-3 font-normal	text-gray-900 border">{{$appointment->service_type}}</td>
-                          <th scope="col" class="px-6 py-3 font-normal	text-gray-900 border">{{$appointment->concern}}</td>
-                            <th scope="col" class="px-6 py-3 font-normal	text-gray-900 border">{{$appointment->phone}}</td> 
+                <td class="px-6 py-3 font-normal	text-gray-900 border">{{ sprintf('%02d%02d-%03d', substr($appointment->appointment_date, 5, 2), substr($appointment->appointment_date, 8, 2), $appointment->queue_number) }}</td>
+                <td class="px-6 py-3 font-normal	text-gray-900 border">{{ $appointment->concern }}</td>
+                <td class="px-6 py-3 font-normal	text-gray-900 border">{{ $appointment->service_type }}</td>
+                <td class="px-6 py-3 font-normal	text-gray-900 border">{{ $appointment->appointment_date }}</td>
+
+                          <td scope="col" class="px-6 py-3 font-normal	text-gray-900 border"> <span class="px-4 py-1 bg-red-400 rounded-full font-bold">Onqueue</span></td>
                  
               </tr>
               @endforeach

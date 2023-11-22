@@ -23,8 +23,9 @@ class EventsController extends Controller
     }
     
     // public function destroy(Event $events) { //delete Patient Record
+    //     // dd($events);
     //     $events->delete();
-    //     return redirect('/event/adminEvents' );
+    //     return redirect('/event/adminEvents');
     // }
     
     public function  adminUpdateEvents (Request $request , Event $event) {  //Edit Event Admin Event Page
