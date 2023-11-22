@@ -26,12 +26,10 @@
                   class="lg:h-[92vh] h-[15rem] flex flex-col justify-center w-4/5 mx-auto text-center"
                 >
                   <h2 class="lg:text-5xl text-xl font-semibold mb-5 lg:mb-10">
-                    Lorem ipsum dolor sit amet
+                    Empowering Wellness, Nurturing Health: Your Path to Vibrant Living!
                   </h2>
                   <p class="w-2/3 mx-auto lg:text-base text-xs">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Suscipit, mollitia illo explicabo praesentium quaerat
-                    vitae amet impedit veritatis, fuga, necessitatibus et in
+                    Our expert team is committed to providing comprehensive care, tailored to your unique needs, ensuring a holistic approach to well-being. From preventive measures to specialized treatments, we are here to support you at every step. Discover the path to a healthier, happier you – because your well-being is our priority.
                   </p>
                 </div>
               </div>
@@ -60,12 +58,10 @@
                   class="lg:h-[92vh] h-[15rem] flex flex-col justify-center w-4/5 mx-auto text-center"
                 >
                   <h2 class="lg:text-5xl text-xl font-semibold mb-5 lg:mb-10">
-                    Lorem ipsum dolor sit amet
+                    Elevate Your Wellness, Ignite Your Vitality: Where Health Meets Harmony.
                   </h2>
                   <p class="w-2/3 mx-auto lg:text-base text-xs">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Suscipit, mollitia illo explicabo praesentium quaerat
-                    vitae amet impedit veritatis, fuga, necessitatibus et in
+                    It's not just about treatments; it's about creating a balanced, vibrant life. Join us on this transformative journey where health seamlessly meets harmony, and discover a renewed sense of vitality that will empower you to live life to the fullest. Your well-being, our commitment.
                   </p>
                 </div>
               </div>
@@ -94,12 +90,10 @@
                   class="lg:h-[92vh] h-[15rem] flex flex-col justify-center w-4/5 mx-auto text-center"
                 >
                   <h2 class="lg:text-5xl text-xl font-semibold mb-5 lg:mb-10">
-                    Lorem ipsum dolor sit amet
+                    Thrive in Health, Flourish in Life: Your Wellness Oasis Awaits.
                   </h2>
                   <p class="w-2/3 mx-auto lg:text-base text-xs">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Suscipit, mollitia illo explicabo praesentium quaerat
-                    vitae amet impedit veritatis, fuga, necessitatibus et in
+                    We believe that true well-being extends beyond the physical, touching every aspect of your life. Join us in creating a narrative of health, where you not only survive but thrive, and where each day is an opportunity to flourish in a life of vitality and joy. Welcome to your wellness journey.
                   </p>
                 </div>
               </div>
@@ -128,12 +122,10 @@
                   class="lg:h-[92vh] h-[15rem] flex flex-col justify-center w-4/5 mx-auto text-center"
                 >
                   <h2 class="lg:text-5xl text-xl font-semibold mb-5 lg:mb-10">
-                    Lorem ipsum dolor sit amet
+                    Wellness Unleashed, Lives Renewed: Embrace the Journey to a Healthier You.
                   </h2>
                   <p class="w-2/3 mx-auto lg:text-base text-xs">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Suscipit, mollitia illo explicabo praesentium quaerat
-                    vitae amet impedit veritatis, fuga, necessitatibus et in
+                    Embark on a transformative journey where unleashed wellness leads to renewed lives. Our health center is your partner in embracing a healthier version of yourself. With a commitment to comprehensive care and personalized solutions, we guide you toward a life where well-being is not just a goal but a daily reality. 
                   </p>
                 </div>
               </div>
@@ -162,12 +154,10 @@
                   class="lg:h-[92vh] h-[15rem] flex flex-col justify-center w-4/5 mx-auto text-center"
                 >
                   <h2 class="lg:text-5xl text-xl font-semibold mb-5 lg:mb-10">
-                    Lorem ipsum dolor sit amet
+                    Health Harmony, Life in Tune: Your Symphony of Well-being Starts Now.
                   </h2>
                   <p class="w-2/3 mx-auto lg:text-base text-xs">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Suscipit, mollitia illo explicabo praesentium quaerat
-                    vitae amet impedit veritatis, fuga, necessitatibus et in
+                    Our team is dedicated to helping you achieve health harmony through personalized care and holistic practices. Step into a world where every note of your well-being resonates in harmony, creating a melody of vitality and balance.
                   </p>
                 </div>
               </div>
@@ -196,12 +186,10 @@
                   class="lg:h-[92vh] h-[15rem] flex flex-col justify-center w-4/5 mx-auto text-center"
                 >
                   <h2 class="lg:text-5xl text-xl font-semibold mb-5 lg:mb-10">
-                    Lorem ipsum dolor sit amet
+                    Wellness Redefined, Lives Rewritten: Crafting a Healthier Tomorrow Together.
                   </h2>
                   <p class="w-2/3 mx-auto lg:text-base text-xs">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Suscipit, mollitia illo explicabo praesentium quaerat
-                    vitae amet impedit veritatis, fuga, necessitatibus et in
+                    Our approach is not just about treatments; it's about rewriting the story of your life with a foundation of well-being. With personalized care and a commitment to your journey, we empower you to reshape your narrative, embracing a future filled with renewed health and vitality.
                   </p>
                 </div>
               </div>

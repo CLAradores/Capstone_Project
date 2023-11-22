@@ -18,7 +18,7 @@ class RecordFactory extends Factory
      
     public function definition(): array
     {
-        $age=rand(3, 100);
+        // $age=rand(3, 100);
         $weight=rand(30, 100);
         $heigth=rand(145, 180);
         $randomLetter = chr(rand(97, 122));
@@ -29,7 +29,6 @@ class RecordFactory extends Factory
             'last_name'=>$this->faker->lastName(),
             'middle_name'=>strtoupper($randomLetter),
             'gender'=>$this->faker->randomElement(['male','female']),
-            'age'=>$age,
             'phone_number'=>$this->faker->phoneNumber(),
             'month_bdate'=>$this->faker->month($max = 'now'),
             'day_bdate'=>$this->faker->dayOfMonth($max = 'now'),
@@ -37,9 +36,6 @@ class RecordFactory extends Factory
             'street_address'=>$this->faker->streetAddress(),
             'street_address_line_2'=>$this->faker->streetName(),
             'city'=>$this->faker->city(),
-            // 'state_province'=>$this->faker->,
-            // 'postal_zipcode'=>$this->faker->,
-            // 'country'=>$this->faker->,
             'height'=>  $heigth,
             'weight'=>  $weight,
             'contact_first_name'=>$this->faker->firstNameMale(),

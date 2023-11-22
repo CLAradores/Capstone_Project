@@ -69,7 +69,8 @@
                 @enderror
               </div>
             </div>
-            <div class="mt-10 pb-10 flex space-x-32 border-b">
+
+            <div class="mt-10 pb-10 flex flex-col lg:flex-row justify-between    ">
               <div>
                 <h4 class="font-medium mt-3">
                   Gender
@@ -89,16 +90,90 @@
                   @enderror
                 </div>
               </div>
-              <div>
+              {{-- <div>
                 <label for="age">Age</label> &nbsp;
                 <input id="age" name="age" value='' class="rounded-lg w-16" type="text" />
                 @error('age')
                 <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
                 @enderror
+              </div> --}}
+              <div>
+                <!-- Phone# -->
+                <h3 class="mt-6 font-medium">
+                  Phone Number <span class="text-red-500"> * </span>
+                </h3>
+                <div class="flex space-x-16">
+                  <div class="relative h-11 max-w-[16.875rem]">
+                    <input
+                      class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                      name='phone_number'
+                      value=''
+                    />
+                  </div>
+                </div>
+                @error('phone_number')
+                <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                @enderror
+              </div>
+              <div>
+                <!-- BirthDate -->
+                <h3 class="mt-6 font-medium">
+                  Birth Date <span class="text-red-500"> * </span>
+                </h3>
+                <div class="lg:flex">
+                  <div class="relative h-11 max-w-auto mx-5 md:my-5 my-0 mt-5">
+                    <select
+                      class="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-red-500 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                      name='month_bdate'
+                    >
+                      <option >month</option>
+                      <option value="01">january</option>
+                      <option value="02">Febuary</option>
+                      <option value="03">March</option>
+                      <option value="04">April</option>
+                      <option value="05">May</option>
+                      <option value="06">June</option>
+                      <option value="07">July</option>
+                    </select>
+              
+                  </div>
+                  <div class="relative h-11 max-w-auto mx-5 mt-5">
+                    <select
+                      class="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-red-500 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                      name='day_bdate'
+                    >
+                      <option >day</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                    </select>
+             
+                  </div>
+                  <div class="relative h-11 max-w-auto mx-5 mt-5">
+                    <select
+                      class="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-red-500 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                      name='year_bdate'
+                    >
+                      <option >year</option>
+                      <option value="2023">2023</option>
+                      <option value="2022">2022</option>
+                      <option value="2021">2021</option>
+                      <option value="2020">2020</option>
+                      <option value="2019">2019</option>
+                      <option value="2018">2018</option>
+                      <option value="2017">2017</option>
+                    </select>
+                  </div>
+             
+                </div>
               </div>
            
             </div>
-            <div>
+            {{-- <div>
               <!-- Phone# -->
               <h3 class="mt-6 font-medium">
                 Phone Number <span class="text-red-500"> * </span>
@@ -115,9 +190,9 @@
               @error('phone_number')
               <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
               @enderror
-            </div>
+            </div> --}}
             <!-- ----- -->
-            <div>
+            {{-- <div>
               <!-- BirthDate -->
               <h3 class="mt-6 font-medium">
                 Birth Date <span class="text-red-500"> * </span>
@@ -172,7 +247,7 @@
                 </div>
            
               </div>
-            </div>
+            </div> --}}
             <!-- address -->
             <h3 class="mt-6 font-medium">
               Address <span class="text-red-500"> * </span>
@@ -215,10 +290,10 @@
               </div>
             </div>
             <!-- 222 -->
-            <div
+            {{-- <div
               class="lg:flex space-y-8 justify-center items-center lg:space-x-16 space-x-2 mt-10"
             >
-              {{-- <div class="relative h-11 w-full min-w-[200px] lg:mt-6 sm:ms-5">
+              <div class="relative h-11 w-full min-w-[200px] lg:mt-6 sm:ms-5">
                 <input
                   placeholder="State/Province"
                   class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
@@ -250,41 +325,35 @@
                   @error('country')
                   <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
                   @enderror
-              </div> --}}
-            </div>
-            <div class="mt-10">
-              <div class="lg:flex justify-center items-center lg:space-x-32">
-                <span>Weight:</span>
-                <div class="relative h-11 w-full min-w-[200px]">
-                  <input
-                    placeholder="in kg"
-                    class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
-                    name='weight'
-                    value=''
-                  />
-             
-                </div>
+              </div>
+            </div> --}}
+            <div class="flex mt-5 space-x-10">
+              <div class="relative   ">
+                <label >Weight</label>
+                <input
+                  placeholder="in kg"
+                  class="peer h-full  border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                  name='weight'
+                />
                 @error('weight')
                 <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
                 @enderror
+           
               </div>
-              <div
-                class="lg:flex justify-center items-center lg:space-x-32 mt-10"
-              >
-                <span>Height:</span>
-                <div class="relative h-11 w-full min-w-[200px]">
-                  <input
-                    placeholder="in cm"
-                    class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
-                    name='height'
-                    value=''
-                  />
-                  @error('height')
-                  <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
-                  @enderror
-                </div>
+              <div class="relative ">
+                <label >Height  </label> 
+                <input
+                  placeholder="in cm"
+                  class="peer h-full  border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                  name='height'
+                />
+                @error('height')
+                <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
+                @enderror
+           
               </div>
             </div>
+
             <h3 class="text-3xl font-semibold mt-16">In Case of Emergency</h3>
             <div>
               <h3 class="mt-6 font-medium lg-mb-0 mb-5">
@@ -369,10 +438,10 @@
                 </div>
               </div>
               <!-- 222 -->
-              <div
+              {{-- <div
                 class="lg:flex space-y-8 justify-center items-center lg:space-x-16 space-x-2 mt-10"
               >
-                {{-- <div class="relative h-11 w-full min-w-[200px] lg:mt-6">
+                <div class="relative h-11 w-full min-w-[200px] lg:mt-6">
                   <input
                     placeholder="State/Province"
                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
@@ -382,8 +451,8 @@
                   @error('contact_state_province')
                   <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
                   @enderror
-                </div> --}}
-                {{-- <div class="relative h-11 w-full min-w-[200px]">
+                </div>  --}}
+              {{-- <div class="relative h-11 w-full min-w-[200px]">
                   <input
                     placeholder="Postal / Zip Code"
                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
@@ -393,8 +462,8 @@
                   @error('contact_postal_zipcode')
                   <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
                   @enderror
-                </div> --}}
-                {{-- <div class="relative h-11 w-full min-w-[200px]">
+                </div>  --}}
+                 {{-- <div class="relative h-11 w-full min-w-[200px]">
                   <input
                     placeholder="Country"
                     class="peer h-full w-full border-b border-blue-gray-200 bg-transparent pt-4 pb-1.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border-blue-gray-200 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
@@ -405,7 +474,7 @@
                   <p class="text-red-500 text-xs mt-1 ">{{$message}}</p>
                   @enderror
                 </div> --}}
-              </div>
+              {{-- </div> --}}
             </div>
             <h3 class="mt-6 font-medium">
               Phone Number <span class="text-red-500"> * </span>
@@ -426,7 +495,7 @@
               <h3 class="text-3xl font-semibold mt-16">
                 General Medical History
               </h3>
-              <h4 class="mt-16 font-medium">
+              {{-- <h4 class="mt-16 font-medium">
                 Have you had the Hepatitis B vaccination?
                 <span class="text-red-500"> * </span>
               </h4>
@@ -689,17 +758,41 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
+
               <!-- textarea -->
-              <div class="my-16 font-medium">
+                <div class="my-16 font-medium">
                 <div class="mt-10">
                   <h4>List any medication taken regularly:</h4>
                   <textarea
                     class="mt-4"
-                    name="textarea1"
+                    name="list_reg_med"
                     id=""
-                    cols="40"
-                    rows="2"
+                    cols="80"
+                    rows="5"
+                  ></textarea>
+                </div>
+              </div>
+                <div class="my-16 font-medium">
+                <div class="mt-10">
+                  <h4>Medical History:</h4>
+                  <textarea
+                    class="mt-4"
+                    name="list_med_history"
+                    id=""
+                    cols="80"
+                    rows="5"
+                  ></textarea>
+                </div>
+              </div>
+                <div class="my-16 font-medium">
+                <div class="mt-10">
+                  <h4>Allergies:</h4>
+                  <textarea
+                    class="mt-4"
+                    name="list_med_allergies"
+                    cols="80"
+                    rows="5"
                   ></textarea>
                 </div>
               </div>

@@ -1,4 +1,4 @@
-@extends('layout')
+{{-- @extends('layout')
 
 @section('content')
 <div >
@@ -11,6 +11,7 @@
           <h2 class="text-3xl font-semibold mb-6 text-center">
             Sign in to your account
           </h2>
+          
           <form>
             <div class="mb-4">
               <label
@@ -218,4 +219,4 @@
     });
   </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script> --}}

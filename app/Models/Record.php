@@ -13,8 +13,8 @@ class Record extends Model
         'first_name',
         'last_name',
         'middle_name',
+        
         'gender',
-        'age',
         'phone_number',
         'month_bdate',
         'day_bdate',
@@ -22,9 +22,6 @@ class Record extends Model
         'street_address',
         'street_address_line_2',
         'city',
-        'state_province',
-        'postal_zipcode',
-        'country',
         'weight',
         'height',
         'contact_first_name',
@@ -32,12 +29,9 @@ class Record extends Model
         'contact_street_address',
         'contact_street_address_line_2',
         'contact_city',
-        'contact_state_province',
-        'contact_postal_zipcode',
-        'contact_country',
         'contact_phone_number',
-        'hepa',
-        'chicken_pox',
+        // 'hepa',
+        // 'chicken_pox',
         // 'medical_history',
         // 'allergies',
         // 'list_reg_med',
@@ -54,8 +48,8 @@ class Record extends Model
             ->orWhere('last_name' , 'like', '%' . request('search') . '%')
             ->orWhere('gender' , 'like', '%' . request('search') . '%')
             ->orWhere('city' , 'like', '%' . request('search') . '%')
-            ->orWhere('age' , 'like', '%' . request('search') . '%')
             ->orWhere('id' , 'like', '%' . request('search') . '%');
+            // ->orWhere('age' , 'like', '%' . request('search') . '%')
            }
   
         

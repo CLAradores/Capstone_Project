@@ -18,33 +18,35 @@
   </div>
   <div class="max-w-6xl mx-auto mt-16">
     <div>
+      @foreach($events as $event)
       <div
         class="lg:flex mt-20 lg:mr-20 mx-20 lg:mx-0 p-5 border-green-400 border rounded-lg bg-green-100"
       >
-        <img src="../img/eventFA.jpg" alt="img" class="h-72 w-full lg:w-96" />
+        <img src="{{$event->event_picture ? asset('storage/' . $event->event_picture) : asset('img/bata.jpg')}}"    alt="img" class="h-72 w-full lg:w-96" />
         <div class="flex lg:ml-3 flex-col justify-center space-y-5">
           <div
-            class="text-center text-xl font-medium"
+            class="text-center text-xl font-medium "
             style="background: #98fb98; padding: 1rem"
           >
             <h2 class="text-xl font-semibold lg:text-left text-center">
-              First Aid / Medical Assistance
+              {{$event->event_title}}
             </h2>
           </div>
           <div class="space-y-5 text-center lg:text-left">
             <div class="flex space-x-10">
-              <h3>Date: 11/26/2004</h3>
-              <h3>Location: Barangay Hall</h3>
+              <h3>Date: <span class="font-medium">{{$event->event_date}}</span></h3>
+              <h3>Time: <span class="font-medium">{{$event->event_time}}</span></h3>
+              <h3>Location: <span class="font-medium">{{$event->event_location}}</span></h3>
             </div>
-            <p class="lg:text-base text-xs">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              voluptates quod porro dolorum, commodi dicta ab fugiat
-              reiciendis iusto quaerat.
+            <p class="lg:text-base text-xs font-medium">
+            {{$event->event_description}}
             </p>
           </div>
         </div>
+        
       </div>
-      <div
+      @endforeach
+      {{-- <div
         class="lg:flex mt-20 lg:mr-20 mx-20 lg:mx-0 border-green-400 border rounded-lg bg-green-100 p-5"
       >
         <img
@@ -129,7 +131,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> --}}
     </div>
 
   </div>

@@ -16,10 +16,10 @@
               {{-- @foreach ($records as $record) --}}
                 {{-- dd($record->attributes->first_name) --}}
               <p class="text-sm font-medium">{{$record->first_name}} {{$record->last_name}}</p>
-              <div class="my-3 text-sm font-medium">
+              {{-- <div class="my-3 text-sm font-medium">
                 <span class="text-green-600 font-semibold">Age:</span>
                 &nbsp; {{$record->age}}
-              </div>
+              </div> --}}
               <div class="my-3 text-sm font-medium">
                 <span class="text-green-600 font-semibold">Gender:</span>
                 &nbsp; {{$record->gender}}
@@ -69,7 +69,7 @@
         </div>
         <div class="flex max-w-[30rem] justify-between">
           <div class="mt-5">
-            <h3 class="text-green-600 font-semibold">Home Phone</h3>
+            <h3 class="text-green-600 font-semibold">Phone Number</h3>
             <p class="text-sm font-medium">{{$record->contact_phone_number}}</p>
           </div>
         
@@ -81,7 +81,7 @@
           General Medical History
         </h3>
       </div>
-      <div class="flex lg:space-x-48 mt-5">
+      {{-- <div class="flex lg:space-x-48 mt-5">
         <div>
           <h3 class="text-green-600 font-semibold">
             Chicken Pox (Varicella):
@@ -96,24 +96,55 @@
             {{$record->measles}}
           </p>
         </div>
-      </div>
-      <div>
+      </div> --}}
+      {{-- <div>
         <h3 class="text-green-600 font-semibold mt-5">
           Have you had the Hepatitis B vaccination?
         </h3>
         <p class="bg-slate-300 py-2 px-4 w-20 text-sm text-center mt-2">{{$record->hepa}}</p>
+      </div> --}}
+      <div class="pb-10 border-b border-green-500 flex lg:flex-row justify-center lg:justify-start flex-col lg:space-y-0 space-y-10 lg:space-x-28">
+        <div>
+            {{-- @php
+            $medList = {{$record->list_reg_med}}
+            $meds = explode(',' $medList)
+            @endphp --}}
+          <h3 class="text-green-600 font-semibold mt-5">
+            List any medication taken regularly:
+          </h3>
+          <ul class="mt-3 text-sm">
+            {{-- @foreach($meds as $med) --}}
+
+           
+            <li><span class="font-bold text-xl">&#x2022;</span> Shabu</li>
+            <li><span class="font-bold text-xl">&#x2022;</span> Cocaine</li>
+            <li><span class="font-bold text-xl">&#x2022;</span> Marijuna</li>
+            {{-- @endforeach --}}
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-green-600 font-semibold mt-5">Medical History</h4>
+          <ul class="mt-3 text-sm">
+            <li>
+              <span class="font-bold text-xl">&#x2022;</span> Chicker Pox
+            </li>
+            <li><span class="font-bold text-xl">&#x2022;</span> Measles</li>
+            <li>
+              <span class="font-bold text-xl">&#x2022;</span> Rheumatic Fever
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-green-600 font-semibold mt-5">Allergies</h4>
+          <ul class="mt-3 text-sm">
+            <li><span class="font-bold text-xl">&#x2022;</span> Measles</li>
+            <li>
+              <span class="font-bold text-xl">&#x2022;</span> Rheumatic Fever
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="pb-10 border-b border-green-500">
-        <h3 class="text-green-600 font-semibold mt-5">
-          List any medication taken regularly:
-        </h3>
-        <ul class="mt-3 text-sm">
-          <li><span class="font-bold text-xl">&#x2022;</span> Shabu</li>
-          <li><span class="font-bold text-xl">&#x2022;</span> Cocaine</li>
-          <li><span class="font-bold text-xl">&#x2022;</span> Marijuna</li>
-        </ul>
-      </div>
-      <div class="mt-10 flex space-x-48">
+      {{-- <div class="mt-10 flex space-x-48">
         <div>
           <h4 class="font-medium">Medical History</h4>
           <ul class="mt-3 text-sm">
@@ -135,7 +166,7 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div> --}}
     </div>
   </div>
   {{-- @endforeach --}}

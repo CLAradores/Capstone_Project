@@ -20,7 +20,7 @@
           <a href="#">
             <img
               class="lg:h-60 h-52"
-              src="img/profile-pic.png"
+              src="img/bata.jpg"
               style="width: 100%"
               alt=""
             />
@@ -30,14 +30,14 @@
               <h5
                 class="lg:mb-2 lg:text-xl text-base font-bold tracking-tight text-gray-900 dark:text-white"
               >
-                Noteworthy technology acquisitions 2021
+                Check Up for Kids
               </h5>
             </a>
 
             <div>
               <div class="lg:text-base text-sm font-mediun mt-2 lg:mt-5">
                 <i class="fa-regular fa-clock font-semibold"></i>&nbsp;
-                <span class="">8:30 AM - 4:30 PM</span>
+                <span class="">7:00 AM - 12:00 PM</span>
               </div>
               <div class="flex justify-between">
                 <div class="font-mediun my-2 lg:my-5 lg:text-base text-sm">
@@ -52,7 +52,7 @@
             </div>
             <div>
               <a
-                href="#"
+                href="/login"
                 class="flex w-full justify-center items-center px-3 py-2 lg:text-base text-sm font-medium text-center text-white bg-green-900 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
               >
                 Book a consultation
@@ -83,29 +83,29 @@
           <a href="#">
             <img
               class="lg:h-60 h-52"
-              src="../img/profile-pic.png"
+              src="img/eventPre.jpg"
               style="width: 100%"
               alt=""
             />
           </a>
           <div class="p-5">
-            <a href="#">
+            <a href="/login">
               <h5
                 class="lg:mb-2 lg:text-xl text-base font-bold tracking-tight text-gray-900 dark:text-white"
               >
-                Noteworthy technology acquisitions 2021
+                Pre-natal Check up
               </h5>
             </a>
 
             <div>
               <div class="lg:text-base text-sm font-mediun mt-2 lg:mt-5">
                 <i class="fa-regular fa-clock font-semibold"></i>&nbsp;
-                <span class="">8:30 AM - 4:30 PM</span>
+                <span class="">7:00 AM - 12:00 PM</span>
               </div>
               <div class="flex justify-between">
                 <div class="font-mediun my-2 lg:my-5 lg:text-base text-sm">
                   <i class="fa-regular fa-calendar-days"></i>&nbsp;
-                  <span class="font-medium">Lunes</span>
+                  <span class="font-medium">Martes</span>
                 </div>
                 <div class="font-mediun my-2 lg:my-5 lg:text-base text-sm">
                   <i class="fa-solid fa-location-dot"></i>&nbsp;
@@ -115,7 +115,7 @@
             </div>
             <div>
               <a
-                href="#"
+                href="/login"
                 class="flex w-full justify-center items-center px-3 py-2 lg:text-base text-sm font-medium text-center text-white bg-green-900 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
               >
                 Book a consultation
@@ -146,7 +146,7 @@
           <a href="#">
             <img
               class="lg:h-60 h-52"
-              src="../img/profile-pic.png"
+              src="img/adult.jpeg"
               style="width: 100%"
               alt=""
             />
@@ -156,14 +156,14 @@
               <h5
                 class="lg:mb-2 lg:text-xl text-base font-bold tracking-tight text-gray-900 dark:text-white"
               >
-                Noteworthy technology acquisitions 2021
+                Check up for Adults
               </h5>
             </a>
 
             <div>
               <div class="lg:text-base text-sm font-mediun mt-2 lg:mt-5">
                 <i class="fa-regular fa-clock font-semibold"></i>&nbsp;
-                <span class="">8:30 AM - 4:30 PM</span>
+                <span class="">7:00 AM - 12:00 PM</span>
               </div>
               <div class="flex justify-between">
                 <div class="font-mediun my-2 lg:my-5 lg:text-base text-sm">
@@ -178,7 +178,7 @@
             </div>
             <div>
               <a
-                href="#"
+                href="/login"
                 class="flex w-full justify-center items-center px-3 py-2 lg:text-base text-sm font-medium text-center text-white bg-green-900 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
               >
                 Book a consultation

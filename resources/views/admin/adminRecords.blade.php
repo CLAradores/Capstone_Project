@@ -12,47 +12,9 @@
           data-dropdown-trigger="hover"
           type="button"
         >
-          <i class="fa-solid fa-plus text-lg font-bold"></i>&nbsp; Add
+         <a href="/admin/adminAddRecords"> <i class="fa-solid fa-plus text-lg font-bold"></i>&nbsp; Add </a>
         </button>
-        <!-- Dropdown menu -->
-        <div
-          id="dropdownDelays"
-          class="z-50 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-        >
-          <ul
-            class="py-2 text-sm text-gray-700 dark:text-gray-200"
-            aria-labelledby="dropdownDelayButtons"
-          >
-            <li>
-              <a
-                href="adminEventAddRecords.html"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Senior Citizens</a
-              >
-            </li>
-            <li>
-              <a
-                href="adminEventAddRecords.html"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Adults</a
-              >
-            </li>
-            <li>
-              <a
-                href="adminEventAddRecords.html"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Kids</a
-              >
-            </li>
-            <li>
-              <a
-                href="adminEventAddRecords.html"
-                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >Person with Disability</a
-              >
-            </li>
-          </ul>
-        </div>
+       
       </div>
     </div>
     <!-- drop -->
@@ -180,7 +142,7 @@
               >
                 <tr>
                   <th scope="col" class="px-6 py-2 text-center border">
-                    Case No.
+                    Records No.
                   </th>
                   <th scope="col" class="px-6 py-2 text-center border">
                     Full Name
@@ -188,9 +150,9 @@
                   <th scope="col" class="px-6 py-2 text-center border">
                     Gender
                   </th>
-                  <th scope="col" class="px-6 py-2 text-center border">
+                  {{-- <th scope="col" class="px-6 py-2 text-center border">
                     Age
-                  </th>
+                  </th> --}}
                   <th scope="col" class="px-6 py-2 text-center border">
                     Date Added
                   </th>
@@ -212,10 +174,10 @@
                   </td>
                   <td class="whitespace-nowrap px-6 py-4 text-center border">
                     {{$record->gender}}
-                  </td>
+                  {{-- </td>
                   <td class="whitespace-nowrap px-6 py-4 text-center border">
                     {{$record->age}}
-                  </td>
+                  </td> --}}
                   <td class="whitespace-nowrap px-6 py-4 text-center border">
                     2023-05-15
                   </td>
@@ -245,8 +207,9 @@
         </div>
       </div>
       @else
-      <p>No Record Found</p>
-                    @endunless
+         
+            <h1 className=" font-bold text-4xl text-center">NO RECORDS FOUND...</h1>
+       @endunless
     </div>
     <div class="mt-6 p-4">
       {{$records->links()}}

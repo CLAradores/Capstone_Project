@@ -13,9 +13,9 @@ class RecordsController extends Controller
         return view('admin.adminDashboard');
     }
 
-    public function  adminEvents() {
-        return view('admin.adminEvents');
-    }
+    // public function  adminEvents() {
+    //     return view('admin.adminEvents');
+    // }
 
     public function  adminRecords() {
         // $records = Record::all();
@@ -25,7 +25,7 @@ class RecordsController extends Controller
     }
     
     public function  adminAddRecords() {
-        return view('admin.adminAddRecords' );  // Show Records
+        return view('admin.adminAddRecords' );  // Show add Form
     }
     
     
@@ -33,45 +33,42 @@ class RecordsController extends Controller
         return view('admin.adminEditRecords' , ['record' => $record]);
     }
 
-    public function destroy(Record $record) {
-        $record->delete();
 
-        return redirect('/admin/adminRecords');
-    }
 
-    public function adminUpdateRecord(Request $request, Record $record) {
+    public function adminUpdateRecord(Request $request, Record $record) {  //Update Patient Record
         $formFields = $request->validate([
             'first_name' => 'required',
             'last_name' => 'required',
-            'middle_name' => 'required',
             'gender' => 'required',
-            'age' => 'required',
             'phone_number' => 'required',
             'month_bdate' => 'required',
             'day_bdate' => 'required',
             'year_bdate' => 'required',
             'street_address' => 'required',
-            'street_address_line_2' => 'required',
             'city' => 'required',
             'height' => 'required',
             'contact_first_name' => 'required',
             'contact_last_name' => 'required',
             'contact_street_address' => 'required',
-            'contact_street_address_line_2' => 'required',
             'contact_city' => 'required',
             'contact_phone_number' => 'required',
         ]);
 
-        $record-> update(($formFields));
-        return redirect('/admin/adminRecords')->with('message', 'Records updated successfully!');
+        $record->update(($formFields));
+        return redirect('/admin/adminRecords');
+    }
+
+    public function destroy(Record $record) { //delete Patient Record
+        $record->delete();
+        return redirect('/admin/adminRecords');
     }
     
     public function  adminRecordView(Record $record) {    //View each Record
-        return view('admin.adminRecordView', ['record' => $record]);
+      return view('admin.adminRecordView', ['record' => $record]);
     }
-    
-    
-    
+            
+
+ 
     
     
     
@@ -96,37 +93,33 @@ class RecordsController extends Controller
     }
     
 
-    public function  create() {
-        return view('adminAddRecords');
-    }
+    // public function  create() {
+    //     return view('adminAddRecords');
+    // }
 
     //Store Patient Records
     public function storeRecords(Request $request) {
-        // dd($request->all());
-
+        // dd(Record::all());
         $formFeilds = $request->validate([
             'first_name' => 'required',
             'last_name' => 'required',
-            'middle_name' => 'required',
             'gender' => 'required',
-            'age' => 'required',
             'phone_number' => 'required',
             'month_bdate' => 'required',
             'day_bdate' => 'required',
             'year_bdate' => 'required',
             'street_address' => 'required',
-            'street_address_line_2' => 'required',
             'city' => 'required',
             'height' => 'required',
             'contact_first_name' => 'required',
             'contact_last_name' => 'required',
             'contact_street_address' => 'required',
-            'contact_street_address_line_2' => 'required',
             'contact_city' => 'required',
             'contact_phone_number' => 'required',
         ]);
+
         Record::create($formFeilds);
-       
+
         return redirect('/admin/adminRecords');
     }
 }

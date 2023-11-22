@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('event_location');
             $table->string('event_date');
             $table->string('event_time');
-            $table->string('picture')->nullable();
+            $table->string('event_picture')->nullable();
             $table->string('event_description');
             $table->timestamps();
         });

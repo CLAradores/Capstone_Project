@@ -24,6 +24,45 @@
       community."
     </p>
   </section>
+  <section>
+    <div
+      class="max-w-6xl mx-auto lg:flex text-center justify-center lg:space-y-0 space-y-10 lg:mt-32 mt-10    "
+
+    >
+      <div class="border mx-10">
+        <div class="text-center mx-10" style="padding: 3rem 1rem">
+          <div
+            class="text-center text-xl font-medium mb-10"
+            style="background: #98fb98; padding: 1rem"
+          >
+            <h2 class="text-2xl font-semibold">Mission</h2>
+          </div>
+          <p class="lg:w-96">
+            At [Your Company Name], our mission is to seamlessly integrate
+            technology and healthcare, providing accessible, personalized care
+            that empowers individuals in their wellness journey. We aim to
+            revolutionize the healthcare experience.
+          </p>
+        </div>
+      </div>
+      <div class="border mx-10">
+        <div class="text-center mx-10" style="padding: 3rem 1rem">
+          <div
+            class="text-center text-xl font-medium mb-10"
+            style="background: #98fb98; padding: 1rem"
+          >
+            <h2 class="text-2xl font-semibold">Vision</h2>
+          </div>
+          <p class="lg:w-96">
+            Our vision is to be the forefront of a healthcare revolution,
+            where technology and compassion converge to redefine the future of
+            well-being. We envision a world where healthcare is not just a
+            service but a personalized, empowering experience.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
   <div class="lg:flex max-w-6xl mx-auto mt-20 justify-center items-center">
     <!-- ------ -->
     <div class="flex flex-col text-center justify-center items-center mx-10">
@@ -319,60 +358,22 @@
     </div>
     <!-- ---- -->
   </div>
-  <section>
-    <div
-      class="max-w-6xl mx-auto lg:flex text-center justify-center items-center my-20 md:my-60"
-      style="height: 100%"
-    >
-      <div class="border mx-10">
-        <div class="text-center mx-10" style="padding: 3rem 1rem">
-          <div
-            class="text-center text-xl font-medium mb-10"
-            style="background: #98fb98; padding: 1rem"
-          >
-            <h2 class="text-2xl font-semibold">Mission</h2>
-          </div>
-          <p class="lg:w-96">
-            At [Your Company Name], our mission is to seamlessly integrate
-            technology and healthcare, providing accessible, personalized care
-            that empowers individuals in their wellness journey. We aim to
-            revolutionize the healthcare experience.
-          </p>
-        </div>
-      </div>
-      <div class="border mx-10">
-        <div class="text-center mx-10" style="padding: 3rem 1rem">
-          <div
-            class="text-center text-xl font-medium mb-10"
-            style="background: #98fb98; padding: 1rem"
-          >
-            <h2 class="text-2xl font-semibold">Vision</h2>
-          </div>
-          <p class="lg:w-96">
-            Our vision is to be the forefront of a healthcare revolution,
-            where technology and compassion converge to redefine the future of
-            well-being. We envision a world where healthcare is not just a
-            service but a personalized, empowering experience.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+
   <!-- component -->
 
   <!-- Testimonials Starts Here -->
   <!-- Testimonials Section -->
-  <section class="bg-gray-200 py-16">
+  <section class="bg-gray-200 flex justify-center items-center py-16">
     <div class="container mx-auto">
       <h2 class="text-3xl font-extrabold text-center mb-8">
         What the people say
       </h2>
 
       <!-- Testimonial Cards -->
-      <div class="flex flex-col lg:flex-row justify-center">
+      <div class="flex flex-col lg:flex-row justify-center max-w-6xl mx-auto">
         <!-- Testimonial 1 -->
         <div
-          class="bg-white p-6 rounded-lg shadow-lg mb-8 lg:mb-0 lg:mr-4 w-full lg:w-1/3"
+          class="bg-white  p-6 rounded-lg shadow-lg mb-8 lg:mb-0 lg:mr-4 w-full lg:w-1/3"
         >
           <div class="flex items-center mb-4">
             <img
@@ -385,8 +386,7 @@
             </div>
           </div>
           <p class="text-gray-700 mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            "The exceptional service here has truly transformed my health. From attentive care to outstanding results, I've found a trusted partner in my well-being."
           </p>
           <div class="flex items-center">
             <div class="text-yellow-500 mr-2">
@@ -418,8 +418,7 @@
             </div>
           </div>
           <p class="text-gray-700 mb-4">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
+            "My dental experience exceeded expectations. Professional, friendly, and transformative – my smile has never been better!"
           </p>
           <div class="flex items-center">
             <div class="text-yellow-500 mr-2">
@@ -449,8 +448,7 @@
             </div>
           </div>
           <p class="text-gray-700 mb-4">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur.
+            "Navigating wellness has been effortless with their guidance. Trustworthy, comprehensive care that empowers me to prioritize my health."
           </p>
           <div class="flex items-center">
             <div class="text-yellow-500 mr-2">
