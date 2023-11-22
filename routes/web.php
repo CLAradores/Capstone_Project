@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\RecordsController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AppointmentController;
 
 /*
@@ -16,6 +17,8 @@ use App\Http\Controllers\AppointmentController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+// ------------------------
 Route::get('/appointment/index', [AppointmentController::class, 'index'])->name('appointments.index'); //show appointment Index
 // Route::get('/appointments', [AppointmentController::class, 'index'])->name('appointments.index'); //show appointment Index
 Route::get('/appointment', [AppointmentController::class, 'create'])->name('appointments.create-mon'); //show apppoinment Form
